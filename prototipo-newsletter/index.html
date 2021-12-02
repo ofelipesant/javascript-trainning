@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="newsletter.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>NEWSLETTER - manipulação de arrays</title>
+</head>
+<body>
+    <header><h1>NEWSLETTER</h1></header>
+
+    <main>
+        <div class="card" id="news">
+            <h2>CADASTRE-SE E RECEBA AS NOVIDADES</h2>
+
+            <label for="input-email">Insira o seu e-mail:</label><br>
+            <input type="text" name="" id="input-email" autocomplete="off">
+
+            <input type="button" value="CADASTRAR" onclick="cadastrar()" class="button">
+        </div>
+
+        <div class="card" id="resultado">
+            <h2>CLIQUE E CONSULTE OS E-MAILS CADASTRADOS</h2><br>
+
+            <input type="button" value="CONSULTAR" onclick="consultar()" class="button">
+
+            <ul class="list"></ul>
+        </div>
+
+    </main>
+
+    <footer class="rodape">
+        <p>Developed by Felipe dos Santos</p>
+        <a href="https://www.instagram.com/santos.felipee/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://github.com/ofelipesant" target="_blank"><i class="fab fa-github"></i></a>
+
+        <label class="checkbox-theme">
+            <input type="checkbox" name="" id="checkbox">
+            <i class="far fa-lightbulb"></i>
+        </label>
+    </footer>
+    
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+</body>
+</html>

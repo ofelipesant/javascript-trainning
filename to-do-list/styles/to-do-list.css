@@ -1,0 +1,219 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital@1&display=swap");
+
+[data-theme="light"] {
+  --background: #aed9e0;
+  --primary-color: #b8f2e6;
+  --secundary-color: #ffa69e;
+  --checked-color: #ffa69e;
+  --close-color: #fcd5ce;
+  --hover-color: #fcd5ce;
+  --section-color: white;
+  --font-color: black;
+  --list-item-color: white;
+
+  --text-font: "Varela Roun", sans-serif;
+  --title-font: "Barlow Condesed" sans-serif;
+}
+
+[data-theme="dark"] {
+  --background: #1c2634;
+  --primary-color: #09383a;
+  --secundary-color: #104f55;
+  --close-color: #fcd5ce;
+  --hover-color: #030027;
+  --section-color: #343a40;
+  --font-color: white;
+  --list-item-color: #cccc;
+
+  --text-font: "Varela Roun", sans-serif;
+  --title-font: "Barlow Condesed" sans-serif;
+}
+
+body {
+  background-color: var(--background);
+  transition: 0.4s;
+}
+
+#theme-style {
+  font-family: var(--text-font);
+  font-size: 20px;
+  position: absolute;
+  top: 236px;
+  left: 708px;
+}
+
+main {
+  background-color: var(--section-color);
+  width: 300px;
+  min-height: 150px;
+  margin: auto;
+  margin-top: 220px;
+  padding: 10px;
+  border-radius: 10px;
+  font-family: var(--text-font);
+  transition: 0.4s;
+}
+
+main > h1 {
+  text-align: center;
+  font-family: var(--title-font);
+  padding-top: 10px;
+  color: var(--font-color);
+  transition: 0.4s;
+}
+
+.list-item {
+  width: 175px;
+  height: 20px;
+  border: 0;
+  border-bottom: solid 2px var(--font-color);
+  padding: 3px;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.171);
+  display: inline-block;
+  margin-left: 40px;
+  margin-top: 25px;
+  font-family: var(--text-font);
+  transition: 0.3s;
+  background-color: var(--section-color);
+  color: var(--font-color);
+}
+
+.list-item:focus {
+  border-bottom: solid 2px var(--secundary-color);
+  outline: none;
+}
+
+.button {
+  width: 50px;
+  height: 30px;
+  border: none;
+  background-color: var(--secundary-color);
+  color: var(--font-color);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-left: 5px;
+}
+
+.button:hover {
+  background-color: var(--hover-color);
+  transform: translateY(-6px);
+  box-shadow: 0 5px 0 -2px var(--secundary-color);
+}
+
+#list {
+  list-style-type: none;
+  margin-top: 20px;
+}
+
+li {
+  position: relative;
+  padding: 8px;
+  transition: 0.1s;
+  cursor: pointer;
+  border-radius: 12px;
+  color: var(--font-color);
+}
+
+li:hover {
+  background-color: var(--background);
+}
+
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: inline-block;
+  padding: 10px;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+footer {
+  margin: auto;
+  text-align: center;
+  margin-top: 15px;
+  font-family: var(--text-font);
+  font-size: 16px;
+  color: var(--font-color);
+  transition: 0.4s;
+}
+
+footer > a {
+  display: inline-block;
+  color: var(--font-color);
+  font-size: 26px;
+  padding: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+footer > a:hover {
+  border-bottom: solid 1px var(--font-color);
+  transform: translateY(-5px);
+}
+
+/* animação do switch button */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin: 10px;
+  left: 810px;
+  top: 220px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #343a40;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+input:checked + .slider {
+  background-color: #23ade2;
+}
+
+input:focus + .slider::before {
+  box-shadow: 0 0 1px #23ade2;
+}
+
+input:checked + .slider::before {
+  transform: translateX(26px);
+}

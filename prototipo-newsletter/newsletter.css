@@ -1,0 +1,210 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: 'titleFont';
+  src: url('fonts/title-font.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'textFont';
+  src: url(fonts/text-font.ttf) format('truetype');
+}
+
+html,
+body {
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+body{
+  background-color: var(--bg-color);
+  transition: .4s;
+  
+}
+
+[data-theme="light"] {
+  --bg-color: white;
+  --text-color: black;
+  --primary-color: #557fc2;
+  --second-color: #52b69a;
+  --card-color: white;
+
+}
+
+[data-theme="dark"]{
+  --bg-color: #1e1e24;
+  --text-color: white;
+  --primary-color: #00aaff;
+  --second-color: #00dd81;
+  --card-color: #25252c;
+}
+
+header {
+  font-family: 'titleFont';
+  color: var(--text-color);
+  margin: auto;
+  text-align: center;
+  padding-top: 80px;
+}
+
+
+main {
+  font-family: 'textFont';
+  width: 70vw;
+  margin: auto;
+  margin-top: 5vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  background-color: var(--card-color);
+  color: var(--text-color);
+  min-width: 150px;
+  max-width: 400px;
+  min-height: 250px;
+  padding: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#news {
+  text-align: center;
+  border-top: solid 3px var(--primary-color);
+  border-left: solid 3px var(--primary-color);
+  box-shadow: 3px 3px 9px rgba(0, 0, 0, 0.199);
+}
+
+#resultado {
+  border-bottom: solid 3px var(--primary-color);
+  border-right: solid 3px var(--primary-color);
+  box-shadow: -3px -3px 9px rgba(0, 0, 0, 0.199);
+}
+
+.card > h1 {
+  text-align: center;
+}
+
+.card > h2 {
+  text-align: center;
+}
+
+label {
+  color: var(--text-color);
+  display: inline-block;
+  max-width: 200px;
+  margin-top: 30px;
+  padding: 5px 20px;
+  text-align: center;
+}
+
+#input-email {
+  background-color: var(--card-color);
+  color: var(--text-color);
+  max-width: 200px;
+  padding: 10px;
+  border: none;
+  border-bottom: 2px solid var(--primary-color);
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.178);
+  margin: 10px 0;
+}
+
+#input-email:focus {
+  outline: 0;
+  border-bottom: 2px solid var(--second-color);
+}
+
+.button {
+  color: var(--text-color);
+  display: block;
+  cursor: pointer;
+  outline: 0;
+  margin: auto;
+  margin-top: 10px;
+  padding: 5px;
+  border-radius: 8px;
+  border: solid 1px var(--second-color);
+  background-color: transparent;
+  transition: 0.4s;
+}
+
+.button:hover {
+  padding: 10px;
+}
+
+.button:focus {
+  padding: 10px;
+  border: solid 2px var(--primary-color);
+}
+
+.list {
+  background-color: var(--card-color);
+  padding: 10px 0;
+  overflow: auto;
+  max-height: 100px;
+  margin: 10px 0;
+}
+
+li {
+  background-color: var(--card-color);
+  color: var(--text-color);
+  list-style: none;
+  padding: 3px 5px;
+  margin: 3px 0;
+  cursor: pointer;
+}
+
+li:hover {
+  border-top: solid 1px var(--second-color);
+  border-bottom: solid 1px var(--second-color);
+}
+
+
+.rodape {
+  font-family: 'textFont';
+  width: 100vw;
+  color: var(--text-color);
+  position: absolute;
+  bottom: 0;
+  padding: 5px 0;
+  background-color: var(--bg-color);
+  transition: .4s;
+}
+
+.rodape > p {
+  display: inline-block;
+}
+
+.rodape > a {
+  color: var(--text-colorx);
+  padding: 5px;
+  font-size: 18px;
+  transition: 0.4s;
+}
+
+.rodape > a:hover {
+  transform: translateY(-10px);
+}
+
+.checkbox-theme{
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 10px;
+}
+
+#checkbox{
+  display: none;
+}
+
+.fa-lightbulb{
+  font-size: 44px;
+  color: var(--text-color);
+  padding: 10px;
+}
