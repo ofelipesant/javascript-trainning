@@ -2,7 +2,7 @@ let nome = document.querySelector('#input-nome')
 let email = document.querySelector('#input-email')
 let senha = document.querySelector("#input-senha")
 let tableCadastros = document.querySelector('.table-cadastros')
-let buttonCadastro = document.querySelector("#button-cadastrar")
+let buttonExcluir = document.querySelector('#button-excluir')
 const usuario = {}
 
 const cadastrar = () => {
@@ -28,6 +28,29 @@ const cadastrar = () => {
         passwordInfo.innerHTML = usuario.password
         infos.appendChild(passwordInfo)
 
+        let checkbox = document.createElement('input')
+        checkbox.className = 'input-usuario'
+        checkbox.type = 'checkbox'
+        infos.appendChild(checkbox)
+
+        let buttonExcluir = document.createElement('button')
+        buttonExcluir.className = 'buttton'
+        buttonExcluir.innerHTML = 'EXCLUIR'
+        infos.appendChild(buttonExcluir)
+
         tableCadastros.appendChild(infos)
+
+        nome.value = ''
+        email.value = ''
+        senha.value = ''
+        nome.focus()
+
+        buttonExcluir.addEventListener('click', deleteItem)
+
+        function deleteItem() {
+            infos.style.display = 'none'
+        }
     }
+
+    
 }
