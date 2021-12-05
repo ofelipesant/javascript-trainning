@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CADASTRO DE USUÁRIO</title>
+</head>
+<body>
+    <main>
+        <div class="cadastro">
+            <label for="input-nome">Nome:</label>
+            <input type="text" name="" id="input-nome" class="input-cadastro">
+
+            <label for="input-email">E-mail:</label>
+            <input type="email" name="" id="input-email" class="input-cadastro">
+
+            <label for="input:senha">Senha:</label>
+            <input type="password" name="" id="input-senha" class="input-cadastro">
+            <button class="button-password"></button>
+
+            <input type="button" value="CADATRAR" class="button" type="button-cadastrar" onclick="cadastrar()">
+        </div>
+
+        <div class="resultado">
+            <h1>Usuários Cadastrados</h1>
+
+            <table class="table-cadastros">
+                <tr class="table-cabecalho">
+                    <th>Nome</th>
+                    <th>E-mail</th>
+                    <th>Senha</th>
+                </tr>
+
+                <tr class="infos">
+                    <td class="cel-name">Felipe dos Santos</td>
+                    <td class="cel-email">santoss.felipe@gmail.com</td>  
+                    <td class="cel-password">Am@relo2021</td>
+                    <td><input type="checkbox" name="" id=""></td>
+                    <td><input type="button" value="EXCLUIR"></td>
+                </tr>
+            </table>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
