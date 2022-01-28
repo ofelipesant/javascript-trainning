@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1>GERADOR DE SENHAS</h1>
+
+        <div class="container-input">
+            <span id="title-caracteres">Tamanho: <span id="valor"> </span> caracteres</span>
+            <input type="range" id="input" class="input-generator" min="6" max="25" type="range">
+
+            <input type="button" id="button-ctf" class="button" value="GERAR SENHA" onclick="criarSenha()">
+        </div>
+
+
+        <div class="container-password hide" id="container-password">
+            <span id="resultado" onclick="copyPassword()"></span>
+            <span class="click-tool">Clique para copiar</span>
+        </div>
+
+    </main>
+
+    <div class="modal">
+        <p>Copiado!</p>
+        <span class="close" onclick="closeModal()">&times;</span>
+    </div>
+</body>
+</html>
