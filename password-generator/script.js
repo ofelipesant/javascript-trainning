@@ -3,11 +3,11 @@ let inputTamanho = document.querySelector('.input-generator')
 let containerPassword = document.querySelector('.container-password')
 let password = document.querySelector('#resultado')
 
-let modal = document.querySelector('.modal')
-let closeButton = document.querySelector('.close')
-
 let charset = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWZYZ0123456789@#!%&'
 let senhaGerada = ''
+
+let modal = document.querySelector('.modal')
+let closeButton = document.querySelector('.close')
 
 tamanhoSenha.innerHTML = inputTamanho.value
 
@@ -30,13 +30,10 @@ function criarSenha(){
 
 function copyPassword(){
     navigator.clipboard.writeText(senhaGerada)
-
     modal.style.display = 'flex';
+    setTimeout(function(){modal.style.display = "none"}, 1500)
 }
 
 function closeModal(){
     modal.style.display = 'none';
 }
-    
-
-
